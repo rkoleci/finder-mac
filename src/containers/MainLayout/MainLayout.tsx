@@ -1,15 +1,37 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Center, Grid, GridItem } from "@chakra-ui/react";
+import SideBar from "containers/Sidebar";
 import React from "react";
 
 export default function MainLayout() {
   return (
-    <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-      <GridItem w="100%" h="10" bg="blue.500">
-        1
-      </GridItem>
-      <GridItem w="100%" h="10" bg="blue.500">
-        2
-      </GridItem>
-    </Grid>
+    <Box
+      bg="url('https://wallpaperaccess.com/full/38598.jpg')"
+      width="100%"
+      h="100vh"
+    >
+      <Box
+        w="60%"
+        pos="absolute"
+        top="100"
+        left="0"
+        right="0"
+        margin="auto"
+        minH="450"
+        borderTopLeftRadius="8"
+        borderBottomLeftRadius="8"
+      >
+        <Grid templateColumns="1fr 3fr">
+          <GridItem
+            h="100%"
+            bg="blue.500"
+            borderTopLeftRadius="8"
+            borderBottomLeftRadius="8"
+          >
+            <SideBar />
+          </GridItem>
+          <GridItem w="100%" h="100%" bg="#fff"></GridItem>
+        </Grid>
+      </Box>
+    </Box>
   );
 }
