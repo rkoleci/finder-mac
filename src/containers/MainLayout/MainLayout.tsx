@@ -1,4 +1,5 @@
 import { Box, Center, Grid, GridItem } from "@chakra-ui/react";
+import Filters from "containers/Filters";
 import SideBar from "containers/Sidebar";
 import React from "react";
 
@@ -29,7 +30,9 @@ export default function MainLayout() {
           >
             <SideBar />
           </GridItem>
-          <GridItem w="100%" h="100%" bg="#fff"></GridItem>
+          <GridItem w="100%" h="100%" bg="#F6F6F6">
+            <Filters />
+          </GridItem>
         </Grid>
       </Box>
     </Box>
